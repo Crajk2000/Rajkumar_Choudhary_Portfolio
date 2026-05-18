@@ -412,7 +412,7 @@ body.hov #cring{width:25px;height:25px;opacity:.9;}
 .edu-inst{font-size:15px;color:var(--cyan);margin-bottom:6px;}
 .edu-meta{font-size:14px;color:var(--muted);}
 
-/* certs */
+/* s */
 .sub-title{font-family:'Syne',sans-serif;font-size:28px;font-weight:700;text-align:center;margin-bottom:26px;}
 .cert-wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
 .cert{
@@ -875,7 +875,7 @@ EDU.forEach(e => {
 // Certs
 const cwEl = document.getElementById('cert-wrap');
 CERTS.forEach(c => {
-  cwEl.insertAdjacentHTML('beforeend',`<div class="cert">${c}</div>`);
+  cwEl.insertAdjacentHTML('beforeend',`<a class="cert" href="${c.url}" target="_blank" rel="noopener">${c.label} <span class="cert-arrow">↗</span></a>`);
 });
 
 /* ════════════════════ SMOOTH SCROLL (bulletproof) ════════════════════ */
